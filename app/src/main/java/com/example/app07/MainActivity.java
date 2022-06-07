@@ -26,16 +26,13 @@ public class MainActivity extends AppCompatActivity {
                 if(txtUsuario.getText().toString().matches("")|| txtContraseña.getText().toString().matches("")){
                     Toast.makeText(MainActivity.this, "Falto capturar informacion",Toast.LENGTH_SHORT).show();
 
-                }else{
+                }else{//MAL
                     if(txtUsuario.getText().toString().matches(user.getUser()) && txtContraseña.getText().toString().matches(user.getContraseña())){
                         Intent intent = new Intent(MainActivity.this,LstActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("usuario", user);
                         intent.putExtras(bundle);
-
                         //intent.putExtra("usuario",txtUsuario.getText().toString());
-
-
                         startActivity(intent);
                     }else{
                         Toast.makeText(MainActivity.this, "Datos incorrectos",Toast.LENGTH_SHORT).show();
@@ -43,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        
     }
     private void iniciar(){
         txtUsuario = (EditText) findViewById(R.id.txtUsuario);

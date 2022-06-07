@@ -14,13 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lblUsuario"
-            android:text="::">
+            android:text="">
 
         </TextView>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lstAlumnos">
+            android:id="@+id/lstAlumnos"
+            >
 
         </ListView>
 
